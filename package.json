@@ -1,0 +1,22 @@
+{
+  "name": "tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "Tip calculator",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --w scss/main.scss -o dist/css/ --recrutive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nova988/Tip-calculator-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nova988/Tip-calculator-App/issues"
+  },
+  "homepage": "https://github.com/Nova988/Tip-calculator-App#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

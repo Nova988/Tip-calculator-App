@@ -28,7 +28,7 @@ ul {
   list-style: none; }
 
 .container {
-  color: #00494d;
+  color: #26c0ab;
   max-width: 1200px;
   min-height: 100%;
   margin: auto;
@@ -53,23 +53,24 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #fff;
-  padding: 2rem 1rem;
+  padding: 2rem 2.5rem;
   border-radius: 1em; }
 
 .label__container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  align-items: flex-start;
+  padding: 0.75rem 0; }
 
 .label__header {
   color: #5e7a7d;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  padding-bottom: 0.5em; }
+  padding-bottom: 0.75em; }
 
 .label__input {
-  background: #f4fafa;
-  color: #5e7a7d;
+  background: url("../images/icon-dollar.svg") no-repeat left 4% center #f4fafa;
+  color: #26c0ab;
   width: 100%;
   font-size: 1rem;
   font-weight: 700;
@@ -77,29 +78,32 @@ ul {
   padding: 0.25em 0.75em;
   border: none; }
 
-.label__container {
+.percentage-box {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; }
+  width: 100%; }
+  .percentage-box label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    flex-basis: 100%;
+    align-self: center;
+    justify-self: center;
+    background: #00494d;
+    color: #f4fafa;
+    padding: 0.4em 0.5em;
+    border-radius: 5px;
+    cursor: pointer; }
+  .percentage-box input {
+    appearance: none; }
+  .percentage-box input[type="radio"]:checked ~ label {
+    background: #26c0ab; }
 
-.label__header {
-  color: #5e7a7d;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding-bottom: 0.5em; }
-
-.label__input {
-  background: #f4fafa;
-  color: #5e7a7d;
+.percentages__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: right;
-  padding: 0.25em 0.75em;
-  border: none; }
+  gap: 0.5em; }
 
-.percentage-box input:checked {
-  background: blue; }
-
-input[type="radio"]:checked + label {
-  color: green; }
+.people-amount .label__input {
+  background-image: url("../images/icon-person.svg"); }

@@ -44,67 +44,74 @@
           <form class="form-section" action="">
             <div class="bill label__container">
               <label for="bill" class="label__header">Bill</label>
-              <input type="text" id="bill" class="label__input" />
+              <input
+                type="text"
+                id="bill"
+                class="label__input"
+                placeholder="0"
+              />
             </div>
             <div class="tip-percentage label__container">
               <p class="label__header">Select Tip %</p>
-              <div class="percentage-box">
-                <label for="percentage5%" class="label__jood">5%</label>
-                <input
-                  type="radio"
-                  id="percentage5%"
-                  name="percentage"
-                  value="0.05"
-                />
-              </div>
-              <div class="percentage-box">
-                <label for="percentage10%">10%</label>
-                <input
-                  type="radio"
-                  id="percentage10%"
-                  name="percentage"
-                  value="0.10"
-                />
-              </div>
-              <div class="percentage-box">
-                <label for="percentage15%">15%</label>
-                <input
-                  type="radio"
-                  id="percentage15%"
-                  name="percentage"
-                  value="0.15"
-                />
-              </div>
-              <div class="percentage-box">
-                <label for="percentage25%">25%</label>
-                <input
-                  type="radio"
-                  id="percentage25%"
-                  name="percentage"
-                  value="0.25"
-                />
-              </div>
-              <div class="percentage-box">
-                <label for="percentage50%">50%</label>
-                <input
-                  type="radio"
-                  id="percentage50%"
-                  name="percentage"
-                  value="0.50"
-                />
-              </div>
-              <div class="percentage-box">
-                <label for="percentageCostum">Costum</label>
-                <input
-                  type="radio"
-                  id="percentageCostum"
-                  name="percentage"
-                  value="costum"
-                />
+              <div class="percentages__container">
+                <div class="percentage-box">
+                  <input
+                    type="radio"
+                    id="percentage5%"
+                    name="percentage"
+                    value="0.05"
+                  />
+                  <label for="percentage5%" class="label__jood">5%</label>
+                </div>
+                <div class="percentage-box">
+                  <label for="percentage10%">10%</label>
+                  <input
+                    type="radio"
+                    id="percentage10%"
+                    name="percentage"
+                    value="0.10"
+                  />
+                </div>
+                <div class="percentage-box">
+                  <label for="percentage15%">15%</label>
+                  <input
+                    type="radio"
+                    id="percentage15%"
+                    name="percentage"
+                    value="0.15"
+                  />
+                </div>
+                <div class="percentage-box">
+                  <label for="percentage25%">25%</label>
+                  <input
+                    type="radio"
+                    id="percentage25%"
+                    name="percentage"
+                    value="0.25"
+                  />
+                </div>
+                <div class="percentage-box">
+                  <label for="percentage50%">50%</label>
+                  <input
+                    type="radio"
+                    id="percentage50%"
+                    name="percentage"
+                    value="0.50"
+                  />
+                </div>
+                <div class="percentage-box">
+                  <label for="percentageCostum">Costum</label>
+                  <input
+                    type="radio"
+                    id="percentageCostum"
+                    name="percentage"
+                    value="costum"
+                  />
+                </div>
               </div>
             </div>
             <div class="people-amount label__container">
-              <label for="amountOfPeople" class="label-header"
+              <label for="amountOfPeople" class="label__header"
                 >Number of people</label
               >
               <input
@@ -113,6 +120,7 @@
                 id="amountOfPeople"
                 value=""
                 class="label__input"
+                placeholder="0"
               />
             </div>
           </form>

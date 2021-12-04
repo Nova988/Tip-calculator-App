@@ -42,13 +42,14 @@
         </div>
         <div class="tip-calculator">
           <form class="form-section" action="">
-            <div class="bill">
-              <label for="bill" class="label-header">Bill</label>
-              <input type="text" id="bill" />
+            <div class="bill label__container">
+              <label for="bill" class="label__header">Bill</label>
+              <input type="text" id="bill" class="label__input" />
             </div>
-            <div class="tip-percentage">
+            <div class="tip-percentage label__container">
+              <p class="label__header">Select Tip %</p>
               <div class="percentage-box">
-                <label for="percentage5%">5%</label>
+                <label for="percentage5%" class="label__jood">5%</label>
                 <input
                   type="radio"
                   id="percentage5%"
@@ -102,13 +103,16 @@
                 />
               </div>
             </div>
-            <div class="people-amount">
-              <label for="amountOfPeople">Number of people</label>
+            <div class="people-amount label__container">
+              <label for="amountOfPeople" class="label-header"
+                >Number of people</label
+              >
               <input
                 type="text"
                 name="amountOfPeople"
                 id="amountOfPeople"
                 value=""
+                class="label__input"
               />
             </div>
           </form>
@@ -131,9 +135,6 @@
         </div>
       </div>
     </main>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

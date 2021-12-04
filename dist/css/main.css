@@ -5,9 +5,9 @@
 
 html,
 body {
-  background: #0f1424;
-  font-size: 18px;
-  font-family: "Rubik", sans-serif;
+  background: #c5e4e7;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
   font-weight: 400;
   line-height: 1.2;
   height: 100vh;
@@ -28,6 +28,7 @@ ul {
   list-style: none; }
 
 .container {
+  color: #00494d;
   max-width: 1200px;
   min-height: 100%;
   margin: auto;
@@ -44,3 +45,61 @@ ul {
 
 .hide {
   display: none; }
+
+.logo {
+  padding-bottom: 5rem; }
+
+.tip-calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  padding: 2rem 1rem;
+  border-radius: 1em; }
+
+.label__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.label__header {
+  color: #5e7a7d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 0.5em; }
+
+.label__input {
+  background: #f4fafa;
+  color: #5e7a7d;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.25em 0.75em;
+  border: none; }
+
+.label__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.label__header {
+  color: #5e7a7d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 0.5em; }
+
+.label__input {
+  background: #f4fafa;
+  color: #5e7a7d;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.25em 0.75em;
+  border: none; }
+
+.percentage-box input:checked {
+  background: blue; }
+
+input[type="radio"]:checked + label {
+  color: green; }

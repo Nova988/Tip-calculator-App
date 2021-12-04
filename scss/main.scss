@@ -1,2 +1,85 @@
 @import "variables";
 @import "main-styles";
+
+// Tip calculator
+.logo {
+  padding-bottom: 5rem;
+}
+
+.tip-calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: $white;
+  padding: 2rem 1rem;
+  border-radius: 1em;
+}
+
+.label__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label__header {
+  color: $darkGrayishCyan;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.label__input {
+  background: $lightGrayishCyan2;
+  color: $darkGrayishCyan;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.25em 0.75em;
+  border: none;
+}
+
+// Form section
+
+// Input container
+.label__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label__header {
+  color: $darkGrayishCyan;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+}
+
+.label__input {
+  background: $lightGrayishCyan2;
+  color: $darkGrayishCyan;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.25em 0.75em;
+  border: none;
+}
+
+// tip selection
+.percentage-box {
+  //   label {
+  //     cursor: pointer;
+  //   }
+
+  input {
+    // appearance: none;
+
+    &:checked {
+      background: blue;
+    }
+  }
+}
+
+input[type="radio"]:checked + label {
+  color: green;
+}

@@ -51,10 +51,24 @@ ul {
 
 .tip-calculator {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr minmax(100px, 400px);
+  column-gap: 3rem;
   background: #fff;
   padding: 2rem 2.5rem;
   border-radius: 1em; }
+
+.btn {
+  width: 100%;
+  padding: 0.75em 1em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer; }
+  .btn-primary {
+    background: #26c0ab;
+    color: #00494d; }
 
 .label__container {
   display: flex;
@@ -70,7 +84,7 @@ ul {
 
 .label__input {
   background: url("../images/icon-dollar.svg") no-repeat left 4% center #f4fafa;
-  color: #26c0ab;
+  color: #00494d;
   width: 100%;
   font-size: 1rem;
   font-weight: 700;
@@ -107,3 +121,36 @@ ul {
 
 .people-amount .label__input {
   background-image: url("../images/icon-person.svg"); }
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  background: #00494d;
+  padding: 2rem;
+  border-radius: 1rem; }
+  .result-section > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%; }
+
+.result__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+.result-header {
+  font-size: 0.7rem;
+  color: #fff; }
+  .result-header span {
+    color: #7f9c9f;
+    font-weight: 700;
+    font-size: 0.6rem; }
+
+.tip-result {
+  font-size: 2rem;
+  font-weight: 700; }

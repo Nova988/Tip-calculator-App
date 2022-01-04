@@ -32,6 +32,11 @@ ul {
   list-style: none;
 }
 
+*::placeholder {
+  font-family: $fontFamily;
+  color: $darkGrayishCyan;
+}
+
 // utilitys
 .container {
   color: $strongCyan;

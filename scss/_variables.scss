@@ -9,6 +9,9 @@ $lightGrayishCyan: hsl(185, 41%, 84%);
 $lightGrayishCyan2: hsl(189, 41%, 97%);
 $white: #fff;
 
+// Hover colors
+$buttonHoverColor: hsl(172, 100%, 84%);
+
 // Font
 $fontSize: 24px;
 
@@ -20,4 +23,4 @@ $mobileWidth: 360px;
 $tabletWidth: 770px;
 
 // transitions
-$hoverTransition: all 300ms ease;
+$hoverTransition: all 200ms ease;

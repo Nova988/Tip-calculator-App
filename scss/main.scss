@@ -168,9 +168,6 @@
     row-gap: 2rem;
     width: 100%;
   }
-
-  .btn {
-  }
 }
 
 .result__box {
@@ -195,3 +192,5 @@
   font-size: 2rem;
   font-weight: 700;
 }
+
+@import "errorMessages";

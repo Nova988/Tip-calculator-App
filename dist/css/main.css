@@ -191,3 +191,6 @@ ul {
 .tip-result {
   font-size: 2rem;
   font-weight: 700; }
+
+.error--bill {
+  border: 2px solid red; }

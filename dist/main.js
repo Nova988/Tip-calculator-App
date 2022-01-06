@@ -1,9 +1,14 @@
 "use strict";
 
 // Variables
-let bill = document.getElementById("bill").value;
+let bill;
+const billEl = document.getElementById("bill");
 let peopleAmount;
-const percentages = document.querySelectorAll('input[name="percentage"]');
+const percentages = Array.from(
+  document.querySelectorAll('input[name="percentage"]')
+);
+const percentagesRadio = percentages.slice(0, -1);
+
 let percentage;
 
 let tipPerPerson;
@@ -12,7 +17,34 @@ let tipAmount = document.getElementById("tip-amount");
 let totalAmount = document.getElementById("total-amount");
 
 const customPercentage = document.getElementById("percentageCostum");
-console.log(customPercentage);
+
+percentagesRadio.forEach((x) => {
+  x.addEventListener("focus", function () {
+    if (customPercentage.value) {
+      customPercentage.value = "";
+    }
+  });
+});
+
+const calculation = function () {
+  tipPerPerson = (bill * percentage) / peopleAmount;
+  totalPerPerson = bill / peopleAmount;
+
+  tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
+  totalAmount.textContent = `$${totalPerPerson.toFixed(2)}`;
+};
+
+const errorMessages = function () {
+  // error message bill
+  if (!bill) {
+    billEl.classList.add("error--bill");
+    console.log("hoi");
+  }
+  if (!peopleAmount) {
+    // Error message peopleAmount
+    console.log("hoi");
+  }
+};
 
 window.addEventListener("keydown", function (e) {
   percentages.forEach((x) => {
@@ -30,16 +62,11 @@ window.addEventListener("keydown", function (e) {
     bill = Number(document.getElementById("bill").value);
     peopleAmount = Number(document.getElementById("amountOfPeople").value);
 
-    tipPerPerson = (bill * percentage) / peopleAmount;
-    totalPerPerson = bill / peopleAmount;
-
-    tipAmount.textContent = `$${tipPerPerson}`;
-    totalAmount.textContent = `$${totalPerPerson}`;
-
-    console.log(percentage);
+    if (percentage && bill && peopleAmount) {
+      calculation();
+    } else errorMessages();
 
     percentage = 0;
-    console.log(percentage);
   }
 });
 

@@ -1,3 +1,20 @@
+.error--text {
+  position: absolute;
+  font-size: 0.5rem;
+  right: 0;
+  top: 25%;
+  color: $errorColor;
+}
+
 .error--bill {
+  position: relative;
   border: 2px solid red;
+
+  &:focus {
+    border: 2px solid red;
+  }
+
+  &:hover {
+    border-color: red;
+  }
 }

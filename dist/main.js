@@ -35,14 +35,19 @@ const calculation = function () {
 };
 
 const errorMessages = function () {
+  const billEl = document.getElementById("bill");
+  const errorBill = document.getElementById("error--bill");
+
+  const peopleEl = document.getElementById("amountOfPeople");
+  const errorPeople = document.getElementById("error--people");
   // error message bill
   if (!bill) {
     billEl.classList.add("error--bill");
-    console.log("hoi");
+    errorBill.classList.remove("hide");
   }
   if (!peopleAmount) {
-    // Error message peopleAmount
-    console.log("hoi");
+    peopleEl.classList.add("error--bill");
+    errorPeople.classList.remove("hide");
   }
 };
 

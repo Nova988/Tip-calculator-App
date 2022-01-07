@@ -78,6 +78,7 @@ ul {
     color: #00494d; }
 
 .label__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -192,5 +193,17 @@ ul {
   font-size: 2rem;
   font-weight: 700; }
 
+.error--text {
+  position: absolute;
+  font-size: 0.5rem;
+  right: 0;
+  top: 25%;
+  color: red; }
+
 .error--bill {
+  position: relative;
   border: 2px solid red; }
+  .error--bill:focus {
+    border: 2px solid red; }
+  .error--bill:hover {
+    border-color: red; }

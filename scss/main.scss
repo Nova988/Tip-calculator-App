@@ -80,6 +80,7 @@
 }
 
 // tip selection
+
 .percentage-box {
   display: flex;
   max-width: 100%;
@@ -116,7 +117,7 @@
 
   input[type="text"] {
     background: $lightGrayishCyan2;
-    border: none;
+    border: 2px solid transparent;
     text-align: right;
     padding: 0.3em 0.5em;
     font-size: 1rem;

@@ -1,12 +1,12 @@
 .error--text {
   position: absolute;
   font-size: 0.5rem;
-  right: 0;
   top: 25%;
+  right: 0;
   color: $errorColor;
 }
 
-.error--bill {
+.error--border {
   position: relative;
   border: 2px solid red;
 
@@ -16,5 +16,28 @@
 
   &:hover {
     border-color: red;
+  }
+}
+
+// Error message select tip
+.percentage-box {
+  input[type="text"] {
+    &.error--border {
+      border: 2px solid red;
+
+      &:focus {
+        border-color: $errorColor;
+      }
+
+      &:hover {
+        border-color: $errorColor;
+      }
+    }
+  }
+}
+
+.tip-percentage.label__container {
+  .error--text {
+    top: 15%;
   }
 }

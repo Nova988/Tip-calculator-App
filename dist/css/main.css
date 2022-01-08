@@ -135,7 +135,7 @@ ul {
     background: #26c0ab; }
   .percentage-box input[type="text"] {
     background: #f4fafa;
-    border: none;
+    border: 2px solid transparent;
     text-align: right;
     padding: 0.3em 0.5em;
     font-size: 1rem;
@@ -196,14 +196,24 @@ ul {
 .error--text {
   position: absolute;
   font-size: 0.5rem;
-  right: 0;
   top: 25%;
+  right: 0;
   color: red; }
 
-.error--bill {
+.error--border {
   position: relative;
   border: 2px solid red; }
-  .error--bill:focus {
+  .error--border:focus {
     border: 2px solid red; }
-  .error--bill:hover {
+  .error--border:hover {
     border-color: red; }
+
+.percentage-box input[type="text"].error--border {
+  border: 2px solid red; }
+  .percentage-box input[type="text"].error--border:focus {
+    border-color: red; }
+  .percentage-box input[type="text"].error--border:hover {
+    border-color: red; }
+
+.tip-percentage.label__container .error--text {
+  top: 15%; }

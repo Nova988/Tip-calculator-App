@@ -1,0 +1,21 @@
+@media screen and (max-width: 1024px) {
+  .logo {
+    padding-bottom: 2rem;
+  }
+
+  .tip-calculator {
+    grid-template-columns: 1fr;
+  }
+
+  .result-section > div {
+    row-gap: 1em;
+  }
+
+  .tip-result {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    margin-top: 1em;
+  }
+}

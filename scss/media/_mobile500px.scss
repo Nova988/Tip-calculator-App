@@ -1,0 +1,26 @@
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 50px 0 20px 0;
+  }
+
+  .tip-calculator {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .percentages__container {
+    grid-template-columns: repeat(2, minmax(10px, 200px));
+  }
+
+  .result-section {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .result-header {
+    font-size: 0.6em;
+
+    span {
+      font-size: 0.8em;
+    }
+  }
+}

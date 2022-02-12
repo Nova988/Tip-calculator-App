@@ -7,7 +7,10 @@ const percentages = Array.from(
   document.querySelectorAll('input[name="percentage"]')
 );
 const percentagesRadio = percentages.slice(0, -1);
+const percentageContainer = document.querySelector(".percentages__container");
 const resetButton = document.getElementById("button--reset");
+
+console.log(percentageContainer);
 
 let percentage;
 
@@ -40,6 +43,38 @@ const calculation = function () {
 
   tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
   totalAmount.textContent = `$${totalPerPerson.toFixed(2)}`;
+};
+
+const dataValues = function () {
+  percentages.forEach((x) => {
+    if (x.checked) {
+      percentage = Number(x.value);
+      customPercentage.value = "";
+    }
+  });
+
+  if (!percentage) {
+    percentage = Number(customPercentage.value) / 100;
+  }
+
+  bill = Number(document.getElementById("bill").value);
+  peopleAmount = Number(document.getElementById("amountOfPeople").value);
+
+  if (
+    percentage &&
+    percentage > 0 &&
+    bill &&
+    bill > 0 &&
+    peopleAmount &&
+    peopleAmount > 0
+  ) {
+    calculation();
+    resetStyles();
+  } else {
+    resetStyles();
+    errorMessages();
+  }
+  percentage = 0;
 };
 
 const errorMessages = function () {
@@ -102,40 +137,6 @@ const resetCalculator = function () {
   errorPercentage.classList.add("hide");
 };
 
-window.addEventListener("keydown", function (e) {
-  percentages.forEach((x) => {
-    if (x.checked) {
-      percentage = Number(x.value);
-      customPercentage.value = "";
-    }
-  });
-
-  if (e.key === "Enter") {
-    if (!percentage) {
-      percentage = Number(customPercentage.value) / 100;
-    }
-
-    bill = Number(document.getElementById("bill").value);
-    peopleAmount = Number(document.getElementById("amountOfPeople").value);
-
-    if (
-      percentage &&
-      percentage > 0 &&
-      bill &&
-      bill > 0 &&
-      peopleAmount &&
-      peopleAmount > 0
-    ) {
-      calculation();
-      resetStyles();
-    } else {
-      resetStyles();
-      errorMessages();
-    }
-    percentage = 0;
-  }
-});
-
 customPercentage.onfocus = function () {
   percentages.forEach((x) => {
     if (x.checked) {
@@ -148,3 +149,7 @@ resetButton.addEventListener("click", function () {
   resetStyles();
   resetCalculator();
 });
+
+billEl.addEventListener("change", dataValues);
+percentageContainer.addEventListener("change", dataValues);
+peopleEl.addEventListener("change", dataValues);

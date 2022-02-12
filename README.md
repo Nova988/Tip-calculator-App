@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontendmentor](https://your-solution-url.com)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/solution-using-sass-and-js-tdI3Ck8VJ)
 - Live Site URL: [Netlify](https://tipcalculatorrrr.netlify.app/)
 
 ## My process
